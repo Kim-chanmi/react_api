@@ -14,7 +14,7 @@ const Movie = () => {
     )
       .then((response) => response.json())
       // .then((result) => console.log(result))
-      .then((result) => setMovies(result))
+      .then((result) => setMovies(result.results))
       .catch((error) => console.log("error", error));
   }, []);
   return (
