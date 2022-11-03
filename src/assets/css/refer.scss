@@ -3,10 +3,12 @@
   h2 {
     font-size: 30px;
     color: var(--white);
+    margin-bottom: 10px;
   }
 }
 .refer__list {
   border: 1px solid var(--bg-dark-border);
+  margin-bottom: 20px;
   li {
     border-bottom: 1px solid var(--bg-dark-border);
     a {

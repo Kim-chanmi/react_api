@@ -13,6 +13,19 @@ const ReferText = ({ num, title, desc, descStar }) => {
   );
 };
 
+const HtmlReferText = ({ num, title, desc, descStar }) => {
+  return (
+    <li>
+      <a href="/">
+        <span className="num">{num}</span>
+        <span className="name">{title}</span>
+        <span className="desc">{desc}</span>
+        <span className="star">{descStar}</span>
+      </a>
+    </li>
+  );
+};
+
 const ReferCont = ({ references }) => {
   return (
     <section className="cont__refer">
@@ -22,6 +35,18 @@ const ReferCont = ({ references }) => {
           <ul className="refer__list">
             {references.map((refer, idx) => (
               <ReferText
+                key={idx}
+                num={refer.num}
+                title={refer.title}
+                desc={refer.desc}
+                descStar={refer.descStar}
+              />
+            ))}
+          </ul>
+          <h2>html</h2>
+          <ul className="refer__list">
+            {references.map((refer, idx) => (
+              <HtmlReferText
                 key={idx}
                 num={refer.num}
                 title={refer.title}

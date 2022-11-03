@@ -23,6 +23,14 @@ const Reference = () => {
       .catch((error) => console.log("error", error));
   }, []);
 
+  useEffect(() => {
+    fetch("https://kim-chanmi.github.io/react_api/src/utils/htmlReference.json")
+      .then((response) => response.json())
+      // .then((result) => console.log(result))
+      .then((result) => setRefernces(result.htmlRefer))
+      .catch((error) => console.log("error", error));
+  }, []);
+
   // useEffect(() => {
   //   fetch("https://webstoryboy.github.io/react2022/src/assets/json/refer.json")
   //     .then((response) => response.json())
