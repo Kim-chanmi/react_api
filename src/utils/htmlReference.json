@@ -1,6 +1,6 @@
 {
-  "type": "css",
-  "cssRefer": [
+  "type": "html",
+  "htmlRefer": [
     {
       "num": 1,
       "title": "&lt;a&gt;",
