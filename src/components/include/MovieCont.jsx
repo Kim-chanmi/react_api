@@ -1,32 +1,32 @@
 import React from "react";
 
-// const MovieText = ({ adult, backdrop_path, genre_ids, original_language }) => {
-//   return (
-//     <li>
-//       <span>{adult}</span>
-//       <span>{backdrop_path}</span>
-//       <span>{genre_ids}</span>
-//       <span>{original_language}</span>
-//     </li>
-//   );
-// };
+function MovieItem(props) {
+  return (
+    <li>
+      <a href={`https://www.themoviedb.org/movie/${props.movie.id}`}>
+        <img
+          src={`https://image.tmdb.org/t/p/w500/${props.movie.poster_path}`}
+          alt={props.movie.title}
+        />
+        <em>
+          <span className="title">{props.movie.title}</span>
+          <span className="star">{props.movie.vote_average}</span>
+        </em>
+      </a>
+    </li>
+  );
+}
 
-const MovieCont = ({ results }) => {
+const MovieCont = (props) => {
   return (
     <section className="cont_movie">
       <div className="container">
         <div className="movie__inner">
-          <div className="movie_box">
-            {/* {results.map((refer, idx) => (
-              <MovieText
-                key={idx}
-                adult={refer.adult}
-                backdrop_path={refer.backdrop_path}
-                genre_ids={refer.genre_ids}
-                original_language={refer.original_language}
-              />
-            ))} */}
-          </div>
+          <ul>
+            {props.movies.map((movies, index) => (
+              <MovieItem key={index} movie={movies} />
+            ))}
+          </ul>
         </div>
       </div>
     </section>
