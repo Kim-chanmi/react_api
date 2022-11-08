@@ -37,18 +37,21 @@
 // export default MoviePopular;
 
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
 
 function MoviePopularItem(props) {
   return (
     <li>
       <a href={`https://www.themoviedb.org/movie/${props.moviesPopular.id}`}>
-        {/* <img src="" alt="" /> */}
         <img
           src={`https://image.tmdb.org/t/p/w500${props.moviesPopular.poster_path}`}
           alt={props.original_title}
         />
         <span className="title">{props.moviesPopular.original_title}</span>
-        <span className="star">{props.moviesPopular.vote_average}</span>
+        <span className="star">{props.index + 1}위</span>
       </a>
     </li>
   );
@@ -60,11 +63,30 @@ function MoviePopular(props) {
   return (
     <section className="cont__popular__movie">
       <div className="container">
-        <div className="movie__popular_inner">
+        <div className="movie__pop">
+          <div className="movie__popular_inner">인기 TOP10</div>
           <ul>
-            {props.moviesPopular.map((moviesPopular, index) => (
-              <MoviePopularItem key={index} moviesPopular={moviesPopular} />
-            ))}
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+              {props.moviesPopular.map((moviesPopular, index) =>
+                index < 10 ? (
+                  <SwiperSlide key={index}>
+                    <MoviePopularItem
+                      key={index}
+                      moviesPopular={moviesPopular}
+                      index={index}
+                    />
+                  </SwiperSlide>
+                ) : null
+              )}
+            </Swiper>
           </ul>
         </div>
       </div>
