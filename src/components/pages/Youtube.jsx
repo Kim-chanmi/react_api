@@ -16,7 +16,7 @@ const Youtube = () => {
 
   const search = async (query) => {
     await fetch(
-      //   `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=AIzaSyDTIcjNDrFGsQio928pinMUZrR4h9XlmGE&maxResults=30&type=video`
+      //   `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=AIzaSyBMw5RG0lHjQd8xTnmA63HCsEe5tXuQ764&maxResults=30&type=video`
       // )
       //   .then((response) => response.json())
       //   .then((result) => setYoutubes(result.items))
@@ -33,7 +33,7 @@ const Youtube = () => {
 
   useEffect(() => {
     // fetch(
-    //   "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=spotv&key=AIzaSyCNlEvsy-8VtD9dAUQihHV-OxP2E9wsOn0&type=video"
+    //   "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=spotv&key=AIzaSyBMw5RG0lHjQd8xTnmA63HCsEe5tXuQ764&type=video"
     // )
     //   .then((response) => response.json())
     //   .then((result) => setYoutubes(result.items))
@@ -47,7 +47,7 @@ const Youtube = () => {
       .catch((error) => console.log("error", error));
 
     // fetch(
-    //   "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=soccer&key=AIzaSyCNlEvsy-8VtD9dAUQihHV-OxP2E9wsOn0&type=video"
+    //   "https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=spotv&key=AIzaSyBMw5RG0lHjQd8xTnmA63HCsEe5tXuQ764&type=video"
     // )
     //   .then((response) => response.json())
     //   .then((result) => setRandom(result.items))
