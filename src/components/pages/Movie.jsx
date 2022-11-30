@@ -83,7 +83,7 @@ const Movie = () => {
 
   const search = async (query) => {
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=3d606cf9dc17d29e0dec9772c8a629e6&languages=ko-kr&query=marvel&page=1&query=${query}`
+      `https://api.themoviedb.org/3/search/movie?api_key=0466376d0c5ab578b755f58c7beec394&languages=ko-kr&query=marvel&page=1&query=${query}`
     )
       .then((response) => response.json())
       // .then((result) => console.log(result.results))
@@ -95,7 +95,7 @@ const Movie = () => {
   useEffect(() => {
     fetch(
       // 1번 : 값을 가져오고
-      "https://api.themoviedb.org/3/movie/popular?api_key=3d606cf9dc17d29e0dec9772c8a629e6&languages=ko-kr&query=marvel&page=1"
+      "https://api.themoviedb.org/3/movie/popular?api_key=0466376d0c5ab578b755f58c7beec394&languages=ko-kr&query=marvel&page=1"
     )
       // 2번 : json으로 변환
       .then((response) => response.json())
@@ -107,7 +107,7 @@ const Movie = () => {
 
   useEffect(() => {
     fetch(
-      "https://api.themoviedb.org/3/search/movie?api_key=3d606cf9dc17d29e0dec9772c8a629e6&languages=ko-kr&query=marvel&page=1"
+      "https://api.themoviedb.org/3/search/movie?api_key=0466376d0c5ab578b755f58c7beec394&languages=ko-kr&query=marvel&page=1"
     )
       .then((response) => response.json())
       .then((result) => setMovies(result.results))
