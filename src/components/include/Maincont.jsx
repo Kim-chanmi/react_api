@@ -11,7 +11,7 @@ const MainText = ({ text }) => {
   return <div>{text}</div>;
 };
 
-const Maincont = () => {
+const MainCont = () => {
   return (
     <section className="cont__main">
       <div className="container">
@@ -25,4 +25,4 @@ const Maincont = () => {
   );
 };
 
-export default Maincont;
+export default MainCont;
